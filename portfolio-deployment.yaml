@@ -10,14 +10,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: portfolio-pod
+      app: portfolio-website
   template:
     metadata:
       labels:
-        app: portfolio-pod
+        app: portfolio-website
     spec:
       containers:
       - name: portfolio
-        image: gcr.io/gkeportfolio/portfolioimage:v1 
+        image: gcr.io/gkeportfolio/portfolioimage@sha256:b50e35bfecfef7d87825f99e9dae0445d1e2c9048a02cdbde43e5fcd67fc89d9
         ports:
         - containerPort: 80
