@@ -1,0 +1,23 @@
+controllers/nginx-deployment.yaml 
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-deployment
+  labels:
+    app: portfoliowebsite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portfolio-pod
+  template:
+    metadata:
+      labels:
+        app: portfolio-pod
+    spec:
+      containers:
+      - name: portfolio
+        image: gcr.io/gkeportfolio/portfolioimage:v1 
+        ports:
+        - containerPort: 80
