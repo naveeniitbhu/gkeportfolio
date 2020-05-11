@@ -55,7 +55,7 @@ spec:
           serviceName: portfolio-service
           servicePort: 80
 ---
-apiVersion: networking.gke.io/v1beta2
+apiVersion: networking.gke.io/v1beta1
 kind: ManagedCertificate
 metadata:
   name: portfolio-certificate
