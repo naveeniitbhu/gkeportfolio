@@ -46,7 +46,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.global-static-ip-name: portfolioingressip
     networking.gke.io/managed-certificates: portfolio-certificate
-    ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   rules:
   - host: naveengarg.dev
