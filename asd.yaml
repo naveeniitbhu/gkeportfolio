@@ -47,6 +47,11 @@ metadata:
     kubernetes.io/ingress.global-static-ip-name: portfolioingressip
     networking.gke.io/managed-certificates: portfolio-certificate
 spec:
-  backend:
-    serviceName: portfolio-service
-    servicePort: 80
+  rules:
+  - host: naveengarg.dev
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: portfolio-service
+            servicePort: 80
