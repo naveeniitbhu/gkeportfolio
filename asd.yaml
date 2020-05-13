@@ -51,7 +51,7 @@ spec:
   - host: naveengarg.dev
     http:
       paths:
-        - path: /
-          backend:
-            serviceName: portfolio-service
-            servicePort: 80
+      - path: /
+        backend:
+          serviceName: portfolio-service
+          servicePort: 80
