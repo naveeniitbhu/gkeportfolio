@@ -55,10 +55,4 @@ spec:
         backend:
           serviceName: portfolio-service
           servicePort: 80
-  - host: www.naveengarg.dev
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: portfolio-service
-          servicePort: 80
+
