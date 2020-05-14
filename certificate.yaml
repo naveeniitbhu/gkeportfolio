@@ -1,0 +1,21 @@
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: naveengarg-dev-tls
+spec:
+  secretName: naveengarg-dev-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssue
+  dnsNames:
+    - naveengarg.dev
+    - www.naveengarg.dev
+  acme:
+    config:
+        - http01:
+            ingressClass: nginx
+          domains:
+            - naveengarg.dev
+            - www.naveengarg.dev
+---
