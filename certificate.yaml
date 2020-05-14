@@ -7,7 +7,7 @@ spec:
   secretName: naveengarg-dev-tls
   issuerRef:
     name: letsencrypt-prod
-    kind: ClusterIssue
+    kind: ClusterIssuer
   dnsNames:
     - naveengarg.dev
     - www.naveengarg.dev
