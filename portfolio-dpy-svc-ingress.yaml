@@ -53,7 +53,7 @@ spec:
     - hosts:
         - naveengarg.dev
         - www.naveengarg.dev
-      secretName: naveengarg-dev-tls
+      secretName: naveengarg-dev
   rules:
     - host: naveengarg.dev
       http:
