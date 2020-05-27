@@ -12,5 +12,4 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
     group: cert-manager.io
-  selector: {}
 ---
