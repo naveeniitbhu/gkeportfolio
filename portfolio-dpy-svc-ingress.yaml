@@ -49,24 +49,28 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
     # cert-manager.io/cluster-issuer: 'letsencrypt-prod'
 spec:
-  # tls:
-  #   - hosts:
-  #       - naveengarg.dev
-  #       - www.naveengarg.dev
-  #     secretName: naveengarg-dev
-  rules:
-    - host: 35.201.223.236
-      http:
-        paths:
-        - path: /
-          backend:
-            serviceName: portfolio-service
-            servicePort: 80
-    # - host: www.naveengarg.dev
-    #   http:
-    #     paths:
-    #     - path: /
-    #       backend:
-    #         serviceName: portfolio-service
-    #         servicePort: 80 
+  backend:
+    serviceName: portfolio-service
+    servicePort: 80
+# spec:
+#   tls:
+#     - hosts:
+#         - naveengarg.dev
+#         - www.naveengarg.dev
+#       secretName: naveengarg-dev
+#   rules:
+#     - host: naveengarg.dev
+#       http:
+#         paths:
+#         - path: /
+#           backend:
+#             serviceName: portfolio-service
+#             servicePort: 80
+#     - host: www.naveengarg.dev
+#       http:
+#         paths:
+#         - path: /
+#           backend:
+#             serviceName: portfolio-service
+#             servicePort: 80 
 ---
