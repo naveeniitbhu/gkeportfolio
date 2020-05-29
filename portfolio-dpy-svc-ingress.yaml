@@ -49,8 +49,6 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
     kubernetes.io/ingress.global-static-ip-name: "portfoliostatic"
 spec:
-  # loadBalancerIP: "35.201.223.236"
-  # externalTrafficPolicy: "Local"
   tls:
     - hosts:
         - naveengarg.dev
@@ -70,5 +68,9 @@ spec:
         - path: /
           backend:
             serviceName: portfolio-service
-            servicePort: 80 
+            servicePort: 80
+status:
+  loadBalancer:
+    ingress:
+    - ip: 35.201.223.236
 ---
