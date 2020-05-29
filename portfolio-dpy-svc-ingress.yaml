@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: portfolio
-        image: gcr.io/portfolio-gke-k8s/portfolio-app@sha256:7433e2db08858906f6ed5043628ceb2836179d5b0b226cc078b93c691e4d57d2
+        image: gcr.io/project-portfolio-278518/portfolio-app@sha256:89b9f12fabf980e7151c3d47bf7a377de4b081a564207346206413cf603e0707
         ports:
         - containerPort: 80
 ---
