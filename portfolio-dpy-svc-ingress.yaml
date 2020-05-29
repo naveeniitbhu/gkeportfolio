@@ -31,7 +31,7 @@ metadata:
     name: portfolio-service
     app: portfoliowebsite
 spec:
-  type: loadBalancer
+  type: LoadBalancer
   externalTrafficPolicy: Local
   loadBalancerIP: 35.201.223.236
   ports:
