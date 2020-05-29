@@ -48,6 +48,8 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
 spec:
+  loadBalancerIP: "35.201.223.236"
+  externalTrafficPolicy: "Local"
   tls:
     - hosts:
         - naveengarg.dev
