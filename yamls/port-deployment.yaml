@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfoliowebsite
+  labels:
+    app: portfoliowebsite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portfoliowebsite
+  template:
+    metadata:
+      labels:
+        app: portfoliowebsite
+    spec:
+      containers:
+      - name: portfoliowebsite
+        image: gcr.io/project-portfolio-278518/portfolio-app@sha256:aa93ccc691a92eff0cee848f12b99bff75c866e9143cea2324e05ff63901755f
+        ports:
+        - containerPort: 80
+---
